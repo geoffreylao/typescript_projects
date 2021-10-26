@@ -12,7 +12,8 @@ export class CsvFileReader {
       .split('\n')
       .map((row: string): string[] => {
       return row.split(',')
-    })
+      })
+
     
   }
 }
