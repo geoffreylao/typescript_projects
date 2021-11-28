@@ -22,6 +22,6 @@ function controller(target: typeof Plane){
     const path = Reflect.getMetadata('path', target.prototype, key)
     const middleware = Reflect.getMetadata('middleware', target.prototype[key])
     
-    router.get(path, target.prototype[key])
+    router.get(path, middleware, target.prototype[key])
   }
 }
